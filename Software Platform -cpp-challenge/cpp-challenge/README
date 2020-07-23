@@ -1,0 +1,35 @@
+## Table of contents
+* [Buggy info](#Buggy)
+* [Build](#Build)
+* [Execution](#Execution)
+* [Assumptions](#Assumptions)
+
+
+# Buggy
+
+The application 'buggy' performs the following functions: 
+
+1. It reads a list of ASCII words from STDIN, a word per input line, terminated by the word 'end'.
+2. It removes the duplicates, sorts the words alphabetically, and prints them with the number of how many times each word was encountered.
+3. Then it repeatedly asks the user to enter a word and tries to look it up in the word list which was entered initially. It terminates when it encounters EOF.
+
+## Build
+
+Build the buggy application in a linux machine using below command,
+
+```
+g++ -std=c++11 buggy.cxx -o buggy -lpthread
+```
+
+## Execution
+
+Execute the buggy application using the below command in a linux machine,
+```
+./buggy
+```
+
+## Assumptions
+
+* If the user provides multiple inputs (spaces between them), only the first word need to be considered.
+* If the user presses 'Enter' before entering a word, it must be ignored.
+* There is not limit to the input word length.
